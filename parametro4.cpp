@@ -29,7 +29,7 @@ int intermediario(int n1, int n2, int n3)
         return n3;
     }
     else
-        cout<<"Informe um valor válido!";
+        cout<<"Informe um valor vÃ¡lido!";
 }
 int main()
 {
