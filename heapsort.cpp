@@ -2,11 +2,11 @@
 
 using namespace std;
 
-void heapify(int* vetor, int i, int tamVetor)
+void heapify(int* vetor, int tamVetor, int i)
 {
 	int esquerda = 2*i;
 	int direita = 2*i+1;
-	int maior;
+	int maior = i;
 	if(esquerda <= tamVetor && vetor[esquerda] >= vetor[i])
     {
 		maior = esquerda;
@@ -24,7 +24,7 @@ void heapify(int* vetor, int i, int tamVetor)
 		int aux = vetor[i];
 		vetor[i] = vetor[maior];
 		vetor[maior] = aux;
-		heapify(vetor,maior,tamVetor);
+		heapify(vetor,tamVetor,maior);
 	}
 }
 
@@ -32,32 +32,32 @@ void Heap(int* vetor, int tamVetor)
 {
     int i;
 
-	for(i<(tamVetor/2);i>=0;i--)
+	for(i=tamVetor/2;i>=0;i--)
     {
-        heapify(vetor,1,tamVetor);
+        heapify(vetor,tamVetor,i);
 	}
 }
 
 void Heapsort(int* vetor, int tamVetor)
 {
     Heap(vetor,tamVetor);
-	for(int i=tamVetor;i>=0;i--)
+	for(int i=tamVetor;i>=1;i--)
     {
 		int aux = vetor[0];
 		vetor[0] = vetor[i];
 		vetor[i] = aux;
 		tamVetor--;
-		heapify(vetor,0,tamVetor);
+		heapify(vetor,tamVetor,0);
 	}
 }
 int main()
 {
     int tamVetor;
-	int vetor[10];
+	int vetor[100];
 
-	cout<<"Digite o tamanho do vetor:";
+	cout<<"Digite o tamanho do vetor (max.100):";
 	cin>>tamVetor;
-
+    
 	for(int i=0;i<tamVetor;i++)
 	{
 	    cout<<"Digite um numero para o vetor:";
@@ -65,9 +65,9 @@ int main()
 	}
 
 	Heapsort(vetor,tamVetor);
-	for(int i=0;i<tamVetor;i++)
+	for(int i=tamVetor;i>0;i--)
     {
-		cout<<vetor[i]<<endl;
+		cout<<vetor[i]<<" "<<endl;
     }
 
     cout<<endl;
