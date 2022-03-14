@@ -53,9 +53,9 @@ void Heapsort(int* vetor, int tamVetor)
 int main()
 {
     int tamVetor;
-	int vetor[100];
+	int vetor[10];
 
-	cout<<"Digite o tamanho do vetor (max.100):";
+	cout<<"Digite o tamanho do vetor (max.9):";
 	cin>>tamVetor;
     
 	for(int i=0;i<tamVetor;i++)
