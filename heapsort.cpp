@@ -53,14 +53,15 @@ void Heapsort(int* vetor, int tamVetor)
 int main()
 {
     int tamVetor;
-	int vetor[10];
 
-	cout<<"Digite o tamanho do vetor (max.9):";
+	cout<<"Digite o tamanho do vetor: ";
 	cin>>tamVetor;
-    
+
+    int vetor[tamVetor];
+
 	for(int i=0;i<tamVetor;i++)
 	{
-	    cout<<"Digite um numero para o vetor:";
+	    cout<<"Digite um numero para o vetor: ";
 	    cin>>vetor[i];
 	}
 
