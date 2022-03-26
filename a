@@ -1,3 +1,0 @@
-R1 = σ ALUNO.nome='Jose' ∧ CIDADE.id=ALUNO.id_cidade (ALUNO x CIDADE)
-R2 = σ novosalunos.id_cidade=CIDADE.id (ρ novosalunos (ALUNO) x CIDADE)
-pi novosalunos.nome (R2)
