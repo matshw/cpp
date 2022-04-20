@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,c,d,*p1,*p2,*p3,*p4;
+
+    a=1;
+    b=2;
+    c=3;
+    d=4;
+
+    p1=&a;
+    p2=&b;
+    p3=&c;
+    p4=&d;
+
+    cout<<"Digite o valor da variável a: "<<endl;
+    cin>>*p1;
+    cout<<"Digite o valor da variável b: "<<endl;
+    cin>>*p2;
+    cout<<"Digite o valor da variável c: "<<endl;
+    cin>>*p3;
+    cout<<"Digite o valor da variável d: "<<endl;
+    cin>>*p4;
+
+}
