@@ -1,0 +1,29 @@
+#include <iostream>
+#include <stdlib.h>
+#include <cstdio>
+
+using namespace std;
+
+int main()
+{
+   char vet[10],*p,i;
+
+   for(int i=0;i<10;i++)
+   {
+       cout<<"Digite uma letra minuscula para a posicao "<<i<<" : ";
+       cin>>vet[i];
+   }
+
+   p=vet;
+
+   for(int i=0;i<10;i++)
+   {
+      p[i] = toupper(p[i]);
+   }
+
+   for(int i=0;i<10;i++)
+   {
+       cout<<vet[i]<<" "<<endl;
+   }
+}
+
